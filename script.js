@@ -470,15 +470,14 @@ if (username) {
 
 for (let patata = 10; patata < 20; patata = patata + 1) {
   
-  // let patata = 10 SOLO SE EJECUTA UNA VEZ (antes de iniciar el bucle)
+  // 1. let patata = 10 SOLO SE EJECUTA UNA VEZ antes de iniciar el bucle
 
-
-  // if (patata < 20) ejecuta el codigo dentro del bucle. AL INICIO DE CADA EJECUCION
+  // 2. if (patata < 20) ejecuta el codigo dentro del bucle. AL INICIO DE CADA EJECUCION
+  
+  // 3. El codigo dentro del bucle se ejecuta
   console.log("yay! bucle de patatas!")
 
-
-
-  // patata = patata + 1 AL FINAL DE CADA EJECUCION
+  // 4. patata = patata + 1 AL FINAL DE CADA EJECUCION
 }
 
 // console.log(patata)
@@ -486,7 +485,27 @@ for (let patata = 10; patata < 20; patata = patata + 1) {
 
 for (let i = 0; i < 200; i = i + 20) {
   console.log("ejecutando un bucle 12 veces", i)
-
 }
 
 // console.log(i)
+
+
+// bucles con variables externas
+
+let lyrics = "Around the world, Around the world, Around the world, Around the world, Around the world, Around the world, Around the world, Around the world, Around the world, Around the world, Around the world, Around the world, Around the world, Around the world, Around the world"
+
+
+// determinar la cantidad de letras "o" del string
+
+let counter = 0;
+
+for (let i = 0; i < lyrics.length; i++) {
+  // console.log( lyrics[i] )
+  if (lyrics[i] === "o") {
+    console.log("consegui la o!")
+    counter = counter + 1
+  }
+}
+
+
+console.log("la cantidad de letras o en la canción es: ", counter)
