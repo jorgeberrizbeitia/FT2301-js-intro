@@ -263,3 +263,147 @@ console.log(randomNumber)
 let random10 = Math.random() * 11
 let random10Int = Math.floor(random10)
 console.log(random10Int)
+
+
+
+
+// BOOLEANS
+
+
+let posBool = true;
+let negBool = false;
+
+
+// Operador Not ! => invierte el booleano
+
+console.log(posBool)
+console.log(!posBool)
+console.log(!!!!!!!!posBool)
+
+
+// OPERADORES DE COMPARACION === & !== comparaciones estrictas
+
+let food1 = "sopa";
+let food2 = "hamburguesa";
+let food3 = "sopa";
+
+console.log(food1 === food2) // false
+console.log(food1 === food3) // true
+
+console.log(food2 !== food3)
+
+console.log(10 >= 20) // false
+console.log(4 < 10) // true
+
+
+console.log("a" < "f") // ASCII true
+console.log("x" < "b") // ASCII false
+
+
+// == & !=
+
+console.log("5" === "5") // true
+console.log("5" === 5) // false
+console.log("5" == 5) // true con == JS va a efectuar coercion de los tipos de data
+
+
+// OPERADORES LOGICOS && || 
+
+console.log("manzana" === "manzana" && "pizza" === "hamburguesa")
+//                   true           &&        false
+//                                 false
+
+// && solo es verdadero si todas las comparaciones son verdaderas
+
+console.log("manzana" === "pera" || "banana" === "banana")
+//                    false      ||         true
+//                              true
+
+// || si al menos una comparaciones es verdadero, todo es verdadero
+
+
+console.log( ("manzana" === "pera" || "banana" === "banana") && "pizza" === "hamburguesa" )
+//                    false                   true
+//                                true                       &&       false
+//                                                          false
+
+
+// Guess the console input for each console.log
+
+console.log(true && false); // false
+console.log(11 % 3 === 2); // 3 + 3 + 3 + 2
+console.log(false || true); // true
+console.log(!true || false); // false
+console.log(17 == '17'); // true
+console.log(123 === '123'); // false
+console.log('Hello' - 'llo'); // NaN
+
+let statement = 'I love JavaScript!';
+let subStatement = statement.slice(7, statement.length);
+console.log(subStatement);
+
+statement[0].toLowerCase(); // "i" ???
+console.log(statement); 
+
+// 1. "i"
+// 2. 'I love JavaScript!'
+
+
+// CONDITIONALS
+
+
+let naranjas = "patata";
+
+if (naranjas === 0) {
+  // solo ejecuta si lo de arriba es verdadero
+  console.log("no tienes naranjas")
+}
+
+if (naranjas > 0 && naranjas < 10) {
+  console.log("tienes naranjas para hacer un juego")
+}
+
+if (naranjas >= 10) {
+  console.log("tienes muchas naranjas para hacer una tienda de jugos")
+}
+
+// if else
+
+if (naranjas === 0) {
+  console.log("no tienes naranjas")
+  // detiene toda la verificacio del condicional
+} else if (naranjas > 0 && naranjas < 10) {
+  console.log("tienes naranjas para hacer un juego")
+} else if (naranjas >= 10) {
+  console.log("tienes muchas naranjas para hacer una tienda de jugos")
+} else {
+  // podemos crear una condicion predeterminada si todo falla
+  // en cualquier otro caso
+  console.log("hubo un error en la data")
+}
+
+
+// SWITCH para comparaciones directas si algo es igual a otra cosa
+
+let manzanas = 5;
+
+switch(manzanas) {
+  case 0:
+    console.log("no tienes manzanas");
+    // break
+    break; // deten la ejecucion a partir de este momento.
+  case 1:
+  case 2:
+  case 3:
+  case 4:
+  case 5:
+  case 6:
+  case 7:
+  case 8:
+  case 9:
+    console.log(`tienes ${manzanas} manzanas para hacer jugo`);
+    break;
+  default: // en cualquier otro caso
+    console.log("tienes muchas manzanas! para una tienda")
+}
+
