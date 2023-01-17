@@ -112,7 +112,7 @@ let recipeTotal = `Mi receta de Smoothie lleva: ${fruit1}, ${fruit2}, y tambien 
 console.log(recipeTotal)
 
 
-// posiciones de caracteres (index) en strings
+// posiciones de caracteres (INDEX) en strings
 
 let simpleWord = "Hola";
 //                ||||
@@ -134,29 +134,38 @@ console.log( simpleWord[simpleWord.length - 1] ) // ultimo caracter (sin importa
 
 
 
-// Algunos metodos de strings
+// Algunos METODOS de strings
 
 
-// indexOf
+// .indexOf()
 
 let song = "bananaramawakawakaehehsamiramira";
 
 console.log( song.indexOf("w") ) // busca posicion de caracter. -1 es que no existe
 
 
+// .slice()
+
 // console.log( song.slice(10, 14) )
 let newStr = song.slice(10, 14)
-console.log(newStr.toUpperCase())
+console.log(newStr)
 
+
+
+// .toUpperCase() & .toLowerCase()
+
+console.log( newStr.toUpperCase() )
 console.log( song.toUpperCase() )
 
+// lo mismo que arriba en una sola linea
+console.log( song.slice(16, 24).toUpperCase() ) 
 
-console.log( song.slice(16, 24).toUpperCase() ) // lo mismo que arriba en una sola linea
 
+
+
+// obtener la primera letra capitalizada
 
 let newWord = "bob"
-
-
 
 let firstLetter = newWord[0].toUpperCase()
 let restofWord = newWord.slice(1)
@@ -165,4 +174,92 @@ let capitalizedWord = firstLetter + restofWord
 console.log(capitalizedWord)
 
 
+// igual que arriba pero en una linea
 console.log( newWord[0].toUpperCase() + newWord.slice(1, newWord.length) )
+
+
+let name1 = "bob"
+let name2 = "Macintosh"
+
+console.log( name1 + " " + name2 )
+console.log( `${name1} ${name2}` )
+
+
+
+
+// NUMBERS
+
+
+
+let posNum = 234234;
+let negNum = -42423;
+let decNum = 0.434;
+// let other = Infinity
+// let other = NaN
+
+
+
+let num1 = 6;
+let num2 = 2;
+
+
+console.log( num1 + num2 );
+console.log( num1 - num2 );
+console.log( num1 * num2 );
+console.log( num1 / num2 );
+console.log( num1 ** num2 );
+
+// % modulus
+
+console.log( num1 % num2 ) // 2 + 2 + 2 = 6
+console.log( 7 % 2 ) // 2 + 2 + 2 = 6 + restante 1
+console.log( 20 % 7 ) // 7 + 7 = 14 + restante 6
+
+// principalmente para saber si un numero es par o impar
+
+
+// operadores matematicos y de asignacion
+
+let myAge = 28;
+console.log(myAge)
+
+myAge = myAge + 1;
+console.log(myAge)
+
+// +=
+myAge += 1; // exactamente lo mismo que myAge = myAge + 1;
+console.log(myAge)
+
+//++
+myAge++ // exactamente lo mismo que myAge = myAge + 1 y que myAge += 1
+console.log(myAge)
+
+
+// COERCION
+
+console.log( 3 + 5 )
+console.log( "3" + "5" )
+
+console.log( "5" - "3" ) //  coerciona los strings a numeros correctamente 5 - 3 = 2
+
+console.log( "Javascript" - "script" ); // NaN
+
+console.log( "3" + 5 ) // "35"
+console.log( 3  + "5")
+// + primero actua como concatenacion
+
+
+// Objetos globales de JS
+
+// Math para obtener numeros aleatorios
+
+let randomNumber = Math.random()
+// Math.random() valor aleatorio entre 0 y 0.999999999999
+console.log(randomNumber)
+
+// quiero un numero entre 0 y 10
+
+
+let random10 = Math.random() * 11
+let random10Int = Math.floor(random10)
+console.log(random10Int)
