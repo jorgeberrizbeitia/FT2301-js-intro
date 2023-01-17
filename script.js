@@ -407,3 +407,86 @@ switch(manzanas) {
     console.log("tienes muchas manzanas! para una tienda")
 }
 
+
+
+//
+
+
+// if (30 === 30) {
+//   console.log("esto se verá?")
+// }
+
+if (30) {
+  // el numero tiene tiene un aspecto verdadero (thruthy)
+  console.log("esto se verá?")
+}
+
+if (0) {
+  // el numero 0 tiene un aspecto similar a false (falsy)
+  console.log("esto se verá? numero 0")
+}
+
+console.log(false === 0) // false
+console.log(false == 0) // falsy en ambos
+
+
+// valores con aspecto falsy
+
+// false
+// 0
+// ""
+// undefined
+// null
+// NaN
+
+if (false || 0 || "" || undefined || null || NaN) {
+  console.log("can't see this!")
+}
+
+console.log( !!"Hola" ) // el valor booleano relativo
+
+
+let username = ""; 
+
+// console.log("Hola " + username)
+
+if (username) {
+  console.log("Hola " + username)
+} else {
+  console.log("Hola usuario, por favor agregue nombre")
+}
+
+
+// FOR LOOP
+
+
+// for (inicialización, condición, expresión final) {
+//  lo que quiero ejecutar x cantidad de veces
+// }
+
+// inicialización es la variable control del bucle
+// condición es lo que determina cuantas veces ocurrirá el bucle
+// expresión final es lo que altera el comportamiento del bucle
+
+for (let patata = 10; patata < 20; patata = patata + 1) {
+  
+  // let patata = 10 SOLO SE EJECUTA UNA VEZ (antes de iniciar el bucle)
+
+
+  // if (patata < 20) ejecuta el codigo dentro del bucle. AL INICIO DE CADA EJECUCION
+  console.log("yay! bucle de patatas!")
+
+
+
+  // patata = patata + 1 AL FINAL DE CADA EJECUCION
+}
+
+// console.log(patata)
+
+
+for (let i = 0; i < 200; i = i + 20) {
+  console.log("ejecutando un bucle 12 veces", i)
+
+}
+
+// console.log(i)
